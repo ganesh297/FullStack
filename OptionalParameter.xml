@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+<test name="Parameter1">
+	<classes>
+	<class name="TestNG.OptionalParameter">
+	<methods>
+		<include name="Parameter1" />
+			<parameter name="Test1" value="First parameter"/>
+		<include name="Parameter2" />
+			<parameter name="Test2" value="Second Parameter"/>
+		<include name="Parameter3">
+   <parameter name="Test3" value="Third Parameter"/>    
+</include>
+</methods>
+</class>
+</classes>
+</test>
+</suite>

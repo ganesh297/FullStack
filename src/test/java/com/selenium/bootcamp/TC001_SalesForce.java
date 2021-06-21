@@ -1,33 +1,23 @@
 package com.selenium.bootcamp;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
-public class TC001_SalesForce {
+public class TC001_SalesForce extends BaseTest{
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test(groups = { "smoke" })
+	public void runSalesForce() throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "D:\\Webdrivers\\chromedriver.exe");
-		ChromeOptions options=new ChromeOptions();
-		options.addArguments("—disable-notification");
-		WebDriver driver=new ChromeDriver(options);
 		
-
-		driver.get("https://login.salesforce.com");
 		driver.manage().window().maximize();
 		driver.findElement(By.id("username")).sendKeys("mercury.bootcamp@testleaf.com");
-		driver.findElement(By.id("password")).sendKeys("Bootcamp$123");
+		driver.findElement(By.id("password")).sendKeys("Bootcamp@123");
 		driver.findElement(By.id("Login")).click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
@@ -110,7 +100,7 @@ public class TC001_SalesForce {
 			System.out.println("Test Case Failed");
 			}
 		
-		driver.close();
+	
 		
 	}
 		

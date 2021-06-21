@@ -1,33 +1,23 @@
 package com.selenium.bootcamp;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
-public class TC005_AccountNameSorted {
+public class TC005_AccountNameSorted extends BaseTest{
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void runAccountNameSorted() throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "D:\\Webdrivers\\chromedriver.exe");
-		ChromeOptions options=new ChromeOptions();
-		options.addArguments("—disable-notifications");
-		WebDriver driver=new ChromeDriver(options);
-		
-
-		driver.get("https://login.salesforce.com");
 		driver.manage().window().maximize();
 		driver.findElement(By.id("username")).sendKeys("mercury.bootcamp@testleaf.com");
 		driver.findElement(By.id("password")).sendKeys("Bootcamp$123");
@@ -85,8 +75,7 @@ public class TC005_AccountNameSorted {
 		
 		System.out.println("The Account Names are Sorted: "+checkSorting(al));
 		
-		driver.close();
-		
+				
 	}
 		
 	static boolean checkSorting(ArrayList< String > arraylist){

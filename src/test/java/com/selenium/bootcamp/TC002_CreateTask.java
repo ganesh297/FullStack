@@ -13,21 +13,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
-public class TC002_CreateTask {
+public class TC002_CreateTask extends BaseTest{
+	
+	@Test(groups = { "smoke" })
+	public void runCreateTask() throws InterruptedException {
 
-	public static void main(String[] args) throws InterruptedException {
-
-		System.setProperty("webdriver.chrome.driver", "D:\\Webdrivers\\chromedriver.exe");
-		ChromeOptions options=new ChromeOptions();
-		options.addArguments("—disable-notification");
-		WebDriver driver=new ChromeDriver(options);
-		
-
-		driver.get("https://login.salesforce.com");
 		driver.manage().window().maximize();
 		driver.findElement(By.id("username")).sendKeys("mercury.bootcamp@testleaf.com");
-		driver.findElement(By.id("password")).sendKeys("Bootcamp$123");
+		driver.findElement(By.id("password")).sendKeys("Bootcamp@123");
 		driver.findElement(By.id("Login")).click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
@@ -88,7 +83,7 @@ public class TC002_CreateTask {
 			System.out.println("Test Case Failed");
 		}
 		
-		driver.close();
+		
 		
 	}
 		

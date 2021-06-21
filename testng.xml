@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="5" parallel="tests">
+
+
+ <parameter name="url" value="https://login.salesforce.com"></parameter>
+ <parameter name="username" value="mercury.bootcamp@testleaf.com"></parameter>
+ <parameter name="password" value="Bootcamp@123"></parameter>
+
+  <test name="ChromeTest" > 
+   
+   <parameter name="browser" value="chrome"></parameter>
+    <groups>
+   <run>
+   <include name = "smoke"></include>
+   </run>
+   </groups>
+   
+    <classes>
+     
+    <class name="com.selenium.bootcamp.TC001_SalesForce"/>
+       <class name="com.selenium.bootcamp.TC002_CreateTask"/>
+      <class name="com.selenium.bootcamp.TC003_EditTask"/>
+       <class name="com.selenium.bootcamp.TC004_ErrorMessage"/>
+      <class name="com.selenium.bootcamp.TC005_AccountNameSorted"/>
+     
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  <!-- 
+   <test name="FirefoxTest" >  
+    <parameter name="browser" value="firefox"></parameter>
+    <classes>
+     <class name="com.selenium.bootcamp.TC001_SalesForce"/>
+       <class name="com.selenium.bootcamp.TC002_CreateTask"/>
+      <class name="com.selenium.bootcamp.TC003_EditTask"/>
+       <class name="com.selenium.bootcamp.TC004_ErrorMessage"/>
+      <class name="com.selenium.bootcamp.TC005_AccountNameSorted"/>
+     
+     
+     
+    </classes>
+  </test> Test
+   -->
+</suite> <!-- Suite -->
