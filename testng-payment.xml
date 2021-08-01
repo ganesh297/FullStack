@@ -9,5 +9,6 @@
       <class name="TestNG.DeletePaymentForCanceled"/>
       <class name="TestNG.DeletePayment"/> -->
     </classes>
+    
   </test> <!-- Test -->
 </suite> <!-- Suite -->
