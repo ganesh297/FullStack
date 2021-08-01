@@ -5,9 +5,9 @@
     <classes>
     <class name="TestNG.CreatePayment"/>
       <class name="TestNG.CreatePaymentAndFindingErrorMessages"/>
-      <class name="TestNG.EditPayment"/>
+      <!-- <class name="TestNG.EditPayment"/>
       <class name="TestNG.DeletePaymentForCanceled"/>
-      <class name="TestNG.DeletePayment"/>
+      <class name="TestNG.DeletePayment"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,140 +1,181 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>FullStack</groupId>
-  <artifactId>FullStack</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  <properties>
-  	
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>FullStack</groupId>
+	<artifactId>FullStack</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+
 		<version.testng>6.14.3</version.testng>
 		<version.selenium-java>3.12.0</version.selenium-java>
 		<version.selenium-server>2.46.0</version.selenium-server>
-		
-		
-    <poi.version>4.1.2</poi.version>
+
+
+		<poi.version>4.1.2</poi.version>
 
 		<version.maven-resources-plugin>2.6</version.maven-resources-plugin>
 		<version.maven-compiler-plugin>3.2</version.maven-compiler-plugin>
 		<version.java-version>1.6</version.java-version>
 		<version.maven.surfire>2.21.0</version.maven.surfire>
-		
-	</properties>
-  <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
- <dependencies>
-<dependency>
-    <groupId>io.appium</groupId>
-    <artifactId>java-client</artifactId>
-   <version>7.3.0</version>
-</dependency>
 
-<dependency>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-lang3</artifactId>
-    <version>3.7</version>
-</dependency>
-  	
-  	<dependency>
-	<groupId>org.seleniumhq.selenium</groupId>
-	<artifactId>selenium-java</artifactId>
-	<version>${version.selenium-java}</version>
-	</dependency>
-		
+	</properties>
+	<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+	<dependencies>
 		<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-core</artifactId>
-    <version>2.11.0</version>
-</dependency>
-    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${version.selenium-java}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>6.10.4</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>6.10.4</version>
+		</dependency>
 <dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-    <version>2.11.0</version>
-</dependency>
-    
-    
-    <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+  <groupId>com.vimalselvam</groupId>
+    <artifactId>cucumber-extentsreport</artifactId>
+    <version>3.1.1</version>
+ </dependency>
+ <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+ <dependency>
+ <groupId>com.aventstack</groupId>
+ <artifactId>extentreports</artifactId>
+ <version>5.0.4</version>
+ </dependency>
 <dependency>
-    <groupId>io.rest-assured</groupId>
-    <artifactId>rest-assured</artifactId>
-    <version>4.3.0</version>
-   </dependency>
-    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>3.8.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.14.3</version>
-			
+
 		</dependency>
-    <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
-<dependency>
-    <groupId>com.googlecode.json-simple</groupId>
-    <artifactId>json-simple</artifactId>
-    <version>1.1.1</version>
-</dependency>
-   
+		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
 
 
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    
-    <artifactId>poi</artifactId>
-    <version>${poi.version}</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml</artifactId>
-    <version>${poi.version}</version>
-</dependency>  
-  <dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>4.3.1</version>
 		</dependency>
-  
-  
-  
-    <dependency>
+
+
+
+		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20190722</version>
 		</dependency>
 
-		
-	<dependency>
-	<groupId>org.testng</groupId>
-	<artifactId>testng</artifactId>
-	<version>${version.testng}</version>
-	</dependency>
-		
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${version.testng}</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
-<dependency>
+		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.8.0</version>
 		</dependency>
 
-	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>4.1.5</version>
-		</dependency>
-	
-		 <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>javax.mail</artifactId>
-            <version>1.6.2</version>
-        </dependency>
-<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-<dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>4.0.0</version>
-</dependency>
 
-  	</dependencies>
-  	
-  	<build>
+		<!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+		<dependency>
+			<groupId>ru.yandex.qatools.ashot</groupId>
+			<artifactId>ashot</artifactId>
+			<version>1.5.4</version>
+		</dependency>
+
+
+		
+
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+
+	</dependencies>
+	
+	
+
+	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -151,101 +192,49 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.0.0-M3</version>
 					<configuration>
-						<suiteXmlFiles> 
-							<suiteXmlFile>TestNG.xml</suiteXmlFile>
+						<suiteXmlFiles>
+							<suiteXmlFile>testng-payment.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
-				
-				
+
+
 				<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <executions>
-        <execution>
-        <id>attach-sources</id>
-        <goals><goal>jar</goal></goals>
-        </execution></executions>
-           </plugin>
-				
-								
-				
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+ 
 			</plugins>
 		</pluginManagement>
 	</build>
-  	
-  	
-  	
-  <!-- 
-  	<build>
-  	<resources> 
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-<plugins>
-  	
-  		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-resources-plugin</artifactId>
-			<version>${version.maven-resources-plugin}</version>
-			<configuration>
-			<encoding>UTF-8</encoding>
-			</configuration>
-		</plugin>
-		
-		<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>${version.maven.surfire}</version>
-				<configuration>
-					<groups>func</groups>
-					
-					<excludedGroups>smoke</excludedGroups>
-					<suiteXmlFiles>
-						<suiteXmlFile>build/TestNG.xml</suiteXmlFile>
-					</suiteXmlFiles>
 
-				</configuration>
-			</plugin>
-		
-  	
-  		<plugin>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>${version.maven-compiler-plugin}</version>
-			<configuration>
-			<encoding>UTF-8</encoding>
-			<source>${version.java-version}</source>
-			<target>${version.java-version}</target>
-			<compilerReuseStrategy>alwaysNew</compilerReuseStrategy>
-			<fork>true</fork>
-			<meminitial>128m</meminitial>
-			<maxmem>128m</maxmem>
-			</configuration>
-		</plugin>
-		
-		<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.17</version>
-				<configuration>
-					<properties>
-						<property>
-							<name>usedefaultlisteners</name>
-							<value>false</value>
-						</property>
-						<property>
-							<name>listener</name>
-							<value>org.uncommons.reportng.HTMLReporter</value>
-						</property>
-					</properties>
-					<reportsDirectory>target/</reportsDirectory>
-				</configuration>
-			</plugin>
-		</plugins>
-  	
-  	</build>
-  	 -->
-  
+
+
+	<!-- <build> <resources> <resource> <directory>src/main/resources</directory> 
+		<filtering>true</filtering> </resource> </resources> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-resources-plugin</artifactId> <version>${version.maven-resources-plugin}</version> 
+		<configuration> <encoding>UTF-8</encoding> </configuration> </plugin> <plugin> 
+		<groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
+		<version>${version.maven.surfire}</version> <configuration> <groups>func</groups> 
+		<excludedGroups>smoke</excludedGroups> <suiteXmlFiles> <suiteXmlFile>build/TestNG.xml</suiteXmlFile> 
+		</suiteXmlFiles> </configuration> </plugin> <plugin> <artifactId>maven-compiler-plugin</artifactId> 
+		<version>${version.maven-compiler-plugin}</version> <configuration> <encoding>UTF-8</encoding> 
+		<source>${version.java-version}</source> <target>${version.java-version}</target> 
+		<compilerReuseStrategy>alwaysNew</compilerReuseStrategy> <fork>true</fork> 
+		<meminitial>128m</meminitial> <maxmem>128m</maxmem> </configuration> </plugin> 
+		<plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
+		<version>2.17</version> <configuration> <properties> <property> <name>usedefaultlisteners</name> 
+		<value>false</value> </property> <property> <name>listener</name> <value>org.uncommons.reportng.HTMLReporter</value> 
+		</property> </properties> <reportsDirectory>target/</reportsDirectory> </configuration> 
+		</plugin> </plugins> </build> -->
+
 </project>
